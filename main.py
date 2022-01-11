@@ -9,12 +9,15 @@ from bokeh.models import ColumnDataSource, Select, Div, Title, WidgetBox, Panel,
 from bokeh.models.widgets import Button
 
 from bokeh.plotting import figure
-from bokeh.sampledata.stocks import AAPL, GOOG, IBM, MSFT
+
 # from test import datetime
 from datetime import date
+import bokeh.sampledata
 
 import os
 
+bokeh.sampledata.download()
+from bokeh.sampledata.stocks import AAPL, GOOG, IBM, MSFT
 # Helper untuk formatting data date & time
 def datetime(x):
     return np.array(x, dtype=np.datetime64)
